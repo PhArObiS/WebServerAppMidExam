@@ -1,0 +1,133 @@
+/* Adjusting base font size for readability on various screen sizes */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Customizing card headers and buttons for a unified appearance */
+.card-header {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+}
+
+/* Ensuring content doesn't stick to the bottom and occupies full height */
+html, body {
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+/* Navbar customization for a sleek and modern appearance */
+.navbar-custom {
+    background-color: #343a40;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-nav .nav-link {
+        color: #fff;
+    }
+
+        .navbar-custom .navbar-nav .nav-link:hover {
+            color: #ffd700;
+        }
+
+/* Enhanced search bar styles */
+.search-bar {
+    background-color: #fff;
+    border-radius: 25px;
+}
+
+/* Dark mode toggle button styling */
+.btn-dark-mode {
+    margin-left: 10px;
+}
+
+/* Button style reset for cleaner appearance */
+.btn-reset {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+/* Special button or CTA styling */
+.btn-stylish {
+    background-color: #5a67d8;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+    .btn-stylish:hover {
+        background-color: #434190;
+        transform: scale(1.05);
+    }
+
+    .btn-stylish:active {
+        transform: scale(1);
+        transition: transform 0.1s;
+    }
+
+/* Dark mode styles – improved for subtleness and elegance */
+body.dark-mode {
+    background-color: #2e2e2e; /* A more subtle grey background for dark mode */
+    color: #ccc;
+}
+
+    body.dark-mode a {
+        color: #fff; /* White text for links in dark mode for better visibility */
+    }
+
+    /* White text in tables in dark mode for readability */
+    body.dark-mode th,
+    body.dark-mode td {
+        color: #fff;
+    }
+
+    /* White borders in tables in dark mode for distinction */
+    body.dark-mode table,
+    body.dark-mode table th,
+    body.dark-mode table td {
+        border-color: #fff;
+    }
+
+    /* Navbar styles in dark mode for contrast and readability */
+    body.dark-mode .navbar-light .navbar-nav .nav-link,
+    body.dark-mode .navbar-light .navbar-brand {
+        color: #ddd !important;
+    }
+
+    body.dark-mode .navbar {
+        background-color: #333 !important;
+    }
+
+/* Visual enhancements for a cleaner look */
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.btn-danger {
+    background-color: #e3342f;
+}

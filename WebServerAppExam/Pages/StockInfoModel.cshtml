@@ -1,0 +1,33 @@
+﻿@page
+@model WebServerAppExam.Pages.StockInfoModel
+
+<div class="container mt-5">
+    <h2 class="mb-4">Stock Information</h2>
+
+    <div class="row text-center">
+        <div class="col-md-4">
+            <div class="card bg-light mb-3">
+                <div class="card-header">Total Stock Value</div>
+                <div class="card-body">
+                    <h5 class="card-title">@Model.TotalValue.ToString("C")</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-light mb-3">
+                <div class="card-header">Average Product Price</div>
+                <div class="card-body">
+                    <h5 class="card-title">@Model.AveragePrice.ToString("C")</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-light mb-3">
+                <div class="card-header">Total Profit</div>
+                <div class="card-body">
+                    <h5 class="card-title">@Model.TotalProfit.ToString("C")</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

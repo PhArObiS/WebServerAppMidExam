@@ -1,0 +1,29 @@
+﻿@page
+@model WebServerAppExam.Pages.DeleteModel
+@{
+    Layout = "_Layout";  // Updated from null to "_Layout" to include the layout elements
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <h5 class="card-title text-danger">Delete Confirmation</h5>
+                    <p>Are you sure you want to delete the following product?</p>
+                    <hr>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>Product ID:</strong> @Model.Products.ProductId</li>
+                        <li class="list-group-item"><strong>Description:</strong> @Model.Products.ProductDescription</li>
+                    </ul>
+
+                    <form method="post" class="mt-4">
+                        <input asp-for="@Model.Products.ProductId" hidden />
+                        <button type="submit" class="btn btn-danger btn-lg btn-block">Yes, Delete</button>
+                        <a asp-page="/Index" class="btn btn-outline-secondary btn-lg btn-block">No, Cancel</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebServerAppExam</title>
+
+    <!-- Importing Bootstrap and Font Awesome for styling and icons -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <!-- Navbar with custom styling, responsive design, and interactive elements -->
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container">
+                <!-- Brand name linked to the homepage -->
+                <a class="navbar-brand" asp-area="" asp-page="/Index">WebServerAppExam</a>
+
+                <!-- Responsive toggle button for mobile view -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar links and interactive elements -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <!-- Navigation links to various pages -->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-page="/Index"><i class="fas fa-home"></i> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-page="/Create"><i class="fas fa-plus"></i> Create</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-page="/StockInfoModel"><i class="fas fa-info"></i> My Stock Info</a>
+                        </li>
+                    </ul>
+
+                    <!-- Search bar with icon and dark mode toggle button -->
+                    <div class="d-flex align-items-center">
+                        <form class="form-inline my-2 my-lg-0" asp-page="/Index" method="get">
+                            <div class="input-group search-bar">
+                                <!-- Search input field -->
+                                <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="searchString">
+                                <!-- Search button with icon -->
+                                <button class="btn btn-outline-dark" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- Dark mode toggle button with icon -->
+                        <button id="darkModeToggle" class="btn btn-dark-mode">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Main content area -->
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- Footer with copyright information and privacy link -->
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - WebServerAppExam - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <!-- Importing JavaScript libraries and custom script -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <!-- Inline JavaScript for dark mode toggle functionality -->
+    <script>
+        document.getElementById('darkModeToggle').addEventListener('click', function () {
+            var body = document.body;
+            body.classList.toggle('dark-mode');
+        });
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
